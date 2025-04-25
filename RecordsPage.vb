@@ -1,4 +1,4 @@
-﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient
 Imports System.IO
 Imports System.Drawing.Printing
 
@@ -55,7 +55,7 @@ Public Class RecordsPage
         If DataGridView1.SelectedRows.Count > 0 Then
             Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
             Dim petID As Integer = selectedRow.Cells("Column2").Value
-            Dim updateForm As New UpdateRecordPage(petID)
+            Dim updateForm As New UpdateOwnerDetails(petID)
             updateForm.ShowDialog()
             Records_Load(sender, e)
         Else
